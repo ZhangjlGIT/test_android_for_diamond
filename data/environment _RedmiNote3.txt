@@ -1,0 +1,25 @@
+#desired capabilities 是一组设置，可以让测试脚本控制appium的运行行为
+#被测设备是哪一种操作系统，IOS，Android，Firefox OS
+platformName=Android
+#手机系统版本
+platformVersion=6.0.1
+#测试设备类型，使用adb devices 查看
+deviceName=3e581162
+#此处的app不需要，因为需要动态的安装最新的app
+#app=
+#被测应用程序的包名
+appPackage=com.tencent.mm
+#被测应用程序启动的Activity名称
+appActivity=ui.LauncherUI
+# 需要输入中文时，请配置unicodeKeyboard和resetKeyboard，用于屏蔽软键盘
+# 乱码时，加入编码：#--coding:gb18030--
+unicodeKeyboard=True
+resetKeyboard=True
+#设置是否每次都重装软件
+noReset=True
+#识别webview
+chromeOptions={'androidProcess': 'com.tencent.mm:tools'}
+#appium服务器等待appium客户端发送新消息的时间，单位为秒
+newCommandTimeout=150
+#appium服务器地址
+remoteHost=http://127.0.0.1:4723/wd/hub
